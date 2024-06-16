@@ -1,0 +1,15 @@
+- name: install and start httpd
+  import_tasks: install_enable.yaml
+  vars:
+    package: httpd
+    service: httpd
+
+- name: copy test.html to index.html
+  copy:
+    src: ./test.html
+    dest: /var/www/html/index.html
+    owner: root
+    group: wheel
+    mode: 0644
+  notify: 
+    - restart_web
