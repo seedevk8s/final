@@ -1,0 +1,15 @@
+---
+  - name: quiz
+    hosts: serverd.test.com
+    tasks:
+      - name: import web_tasks
+        import_tasks: web_tasks.yaml
+
+      - name: import firewall_tasks
+        import_tasks: firewall_tasks.yaml
+
+    handlers:
+      name: restart_web
+      service:
+        name: httpd
+        state: restarted 
