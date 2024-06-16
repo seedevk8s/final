@@ -4,6 +4,7 @@
     package: httpd
     service: httpd
 
+
 - name: copy test.html to index.html
   copy:
     src: ./test.html
@@ -11,5 +12,5 @@
     owner: root
     group: wheel
     mode: 0644
-  notify: 
+  notify:
     - restart_web
