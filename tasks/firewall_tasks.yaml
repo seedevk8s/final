@@ -1,0 +1,12 @@
+- name: install and start firewall
+  import_tasks: install_enable.yaml
+  vars:
+    package: firewall
+    service: firewall
+
+- name: add rule
+  firewalld:
+    service: http 
+    permanent: true 
+    state: enabled
+    immediate: true
