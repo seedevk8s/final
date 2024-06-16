@@ -11,7 +11,7 @@
 
 
   handlers:
-    name: restart_web
-    service:
-      name: httpd
-      state: restarted
+    - name: restart_web
+      service:
+        name: httpd
+        state: restarted
