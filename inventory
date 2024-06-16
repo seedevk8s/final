@@ -1,0 +1,8 @@
+[web]
+servera.test.com
+serverb.test.com
+
+[was]
+serverc.test.com
+serverd.test.com
+
